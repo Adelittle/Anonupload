@@ -20,7 +20,7 @@ BANNERS
 OPTIONS () {
 printf "${red}[>]${white} File     :${lightgreen} "
 read goblok
-hasil=$(curl -F "file=@mj.html" https://api.anonfile.com/upload | grep -Po 'full":"\K.*?(?=")');
+hasil=$(curl -F "file=@${goblok}" https://api.anonfile.com/upload | grep -Po 'full":"\K.*?(?=")');
   printf "\n${white}Result: ${lightgreen} ${hasil} \n"
 }
 OPTIONS
